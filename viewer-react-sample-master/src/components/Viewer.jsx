@@ -64,11 +64,13 @@ class Viewer extends React.Component {
         if (this.viewer) {
             this.viewer.removeEventListener(Autodesk.Viewing.CAMERA_CHANGE_EVENT, this.onViewerCameraChange);
             this.viewer.removeEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, this.onViewerSelectionChange);
+            this.viewer.removeEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT);
             this.viewer.finish();
             this.viewer = null;
         }
+       
     }
-
+    
     componentDidUpdate(prevProps) {
         if (this.viewer) {
             this.updateViewerState(prevProps);

@@ -57,7 +57,8 @@ const TabComponent = () => {
         zIndex: 1000,
         width: '450px',
         height: '385px',
-        overflow: 'auto'
+        overflow: 'auto',
+        paddingBotton: '520px'
     };
 
     const tabContentStyle = {

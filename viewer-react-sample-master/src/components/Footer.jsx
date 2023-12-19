@@ -3,25 +3,31 @@ import React from 'react';
 const Footer = () => {
     const footerStyle = {
         position: 'fixed', // Fija el footer en la parte inferior
-        height: 50 ,
         bottom: 0,
-        width: '100%',
-        backgroundColor: '#14130F', // Ajusta el color de fondo según tus necesidades
-        color: '#6c757d', // Ajusta el color del texto según tus necesidades
+        width: '105%', // Cambiado de 110% a 100%
+        height: '50px',
+        backgroundColor: '#14130F', // Color de fondo
+        color: '#FFF', // Color del texto
         textAlign: 'center',
-        marginTop: '250px', // Ajusta el padding según tus necesidades
         zIndex: 1000, // Asegura que el footer se mantenga sobre otros elementos
-        color: '#FFF',
-        fontSize: 18,
-      
+        fontSize: 14,
         fontWeight: 700,
-     
-        letterSpacing: -0.45
+        letterSpacing: -0.45,
+        left: '-15px'
     };
+
+    const divStyle = {
+        height: '100%', // Ajusta la altura al 100% del footer
+        display: 'flex',
+        alignItems: 'center', // Alineación vertical
+        justifyContent: 'center', // Alineación horizontal
+        marginTop: '5px'
+    };
+
     return (
         <footer style={footerStyle}>
-            <div>
-                <p>  Copyright &copy; {new Date().getFullYear()} ICD. </p>
+            <div style={divStyle}>
+                <p>Copyright &copy; {new Date().getFullYear()} ICD.</p>
                 {/* Puedes agregar más contenido aquí, como enlaces o información adicional */}
             </div>
         </footer>
