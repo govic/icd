@@ -29,7 +29,7 @@ const App = ({ token, urn }) => {
                             <Routes>
                                 <Route path="/" element={<ColumnaDerecha isCollapsed={isCollapsed} token={token} urn={urn} />} />
                                 <Route path="/estadisticas" element={<Estadisticas />} />
-                                <Route path="/proyectos" element={<Proyectos />} />
+                                <Route path="/proyectos" element={<Proyectos token={token} urn={urn}/>} />
                                 <Route path="/AdministracionCuentas" element={<AdministracionCuentas />} />
                                 <Route path="/Perfil" element={<Perfil />} />
                                 <Route path="/ConfiguracionVisualizador" element={<ConfiguracionVisualizador />} />

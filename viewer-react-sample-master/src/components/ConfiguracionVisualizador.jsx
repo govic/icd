@@ -1,11 +1,28 @@
 import React from 'react';
+import HeaderApp from './HeaderApp';
+
+import TabConfiguracion from './configuracionVisualizador/TabConfiguracion';
 
 const ConfiguracionVisualizador = () => {
+    const estiloConfiguracion = {
+        backgroundColor: '#D8D8D8', // Color de fondo
+        padding: '20px', // Agrega un poco de espacio alrededor del contenido
+        height: 'calc(100vh - 64px)', // Altura total de la ventana menos la altura del HeaderApp
+        overflowY: 'scroll', // Activa el desplazamiento vertical
+    };
+
     return (
         <div>
-            <h2>ConfiguracionVisualizador</h2>
-            <p>Aquí se mostrarán  Configuración Visualizador...</p>
-            {/* Inserta gráficos o tablas de estadísticas aquí */}
+            <HeaderApp /> {/* Instancia el componente HeaderApp */}
+            <div style={estiloConfiguracion}>
+                <div className='row'>
+                    <div className='col-12'>
+                   <TabConfiguracion/>
+                    </div>
+                </div>
+                {/* A */}
+               
+            </div>
         </div>
     );
 };

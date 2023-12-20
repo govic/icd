@@ -14,17 +14,17 @@ const GraficoEstadistica = ({ titulo }) => {
       {
         label: 'Dato 1',
         data: [12, 19, 3, 5, 2],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: '#E04C41',
       },
       {
         label: 'Dato 2',
         data: [2, 3, 20, 5, 1],
-        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        backgroundColor: '#737373',
       },
       {
         label: 'Dato 3',
         data: [3, 10, 13, 15, 22],
-        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+        backgroundColor: '#EE736A',
       },
     ],
   };
