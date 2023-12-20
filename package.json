@@ -1,10 +1,10 @@
 {
-  "name": "viewer-react-sample",
-  "version": "0.0.0",
+  "name": "icd-app",
+  "version": "1.0.0",
   "scripts": {
     "start-client": "react-scripts start",
     "start-server": "node server/server.js",
-    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+    "start": "node server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
