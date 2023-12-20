@@ -11,5 +11,9 @@ app.get('/api/data', (req, res) => {
     res.json({ mensaje: 'Datos de ejemplo' });
 });
 
+app.get('/', (req, res) => {
+    res.json({ message: 'We are working for you!' });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));

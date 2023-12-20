@@ -1,11 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
+import useCustomStyles from '../../hooks/useCustomStyles';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, useTheme } from '@mui/material';
 
-const useStyles = makeStyles({
+const useStyles = () => ({
   tableContainer: {
     marginTop: '50px',
-   
+
     fontFamily: 'Rajdhani, sans-serif',
     '&.css-11xur9t-MuiPaper-root-MuiTableContainer-root': {
       width: '93%',
@@ -22,7 +22,8 @@ const useStyles = makeStyles({
 });
 
 const ProyectosUsuarios = () => {
-  const classes = useStyles();
+  const theme = useTheme();
+  const classes = useCustomStyles(useStyles, theme)
   const filas = [
     { nombre: 'Nombre1', usuario: 'Usuario 1', perfil: 'Admin' },
     // ... otros datos
@@ -46,8 +47,8 @@ const ProyectosUsuarios = () => {
               <TableCell>{fila.usuario}</TableCell>
               <TableCell>{fila.perfil}</TableCell>
               <TableCell>
-                <Button 
-                  variant="contained" 
+                <Button
+                  variant="contained"
                   className={classes.button}
                   startIcon={<img src="images/eliminaAsociacionIcn.svg" alt="" />}
                 >
