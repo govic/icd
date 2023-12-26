@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm install --omit=dev
+      - npm login && npm install --omit=dev
   pre_build:
     commands:
       - echo Pre-Build started on `date`, Installing NPM Dependencies
