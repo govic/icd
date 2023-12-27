@@ -5,7 +5,8 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm login && npm install --omit=dev
+      - cat /root/.npm/_logs/2023-12-27T14_37_51_265Z-debug-0.log
+      - npm install --omit=dev
   pre_build:
     commands:
       - echo Pre-Build started on `date`, Installing NPM Dependencies
