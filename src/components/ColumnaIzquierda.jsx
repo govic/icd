@@ -76,7 +76,7 @@ const liNormal = {
     height:'64px'
 };
     return (
-        <div className={`${styles.leftColumn} col-${isCollapsed ? '1' : '2'}`} style={{width: isCollapsed ? '100%' : '100%'}}>
+        <div className={`${styles.leftColumn} col-${isCollapsed ? '1' : '2'}`} style={{width: isCollapsed ? '100%' : '100%',  height:'100%'}}>
             <div className="container-fluid" style={{padding: '0'}}>
                 <div className="row">
                 <div className="col" style={estiloPrimeraFila}>
