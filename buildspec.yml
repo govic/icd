@@ -4,16 +4,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
-    commands:
-      - export NPM_REGISTRY=https://registry.npmjs.org/
-      - npm set registry=https://registry.npmjs.org/ --userconfig .npmrc
-      - npm install --omit=dev --loglevel=verbose --registry=https://registry.npmjs.org/
   pre_build:
     commands:
-      - echo Pre-Build started on `date`, Installing NPM Dependencies
+      - npm config set registry https://registry.npmjs.com/
   build:
     commands:
-      - echo Build started on `date`
+      - npm install --omit=dev --loglevel=verbose
   post_build:
     commands:
       - echo Build completed on `date`
