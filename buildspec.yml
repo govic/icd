@@ -6,6 +6,7 @@ phases:
       nodejs: 18
     commands:
       - export NPM_REGISTRY=https://registry.npmjs.org/
+      - npm set registry=https://registry.npmjs.org/ --userconfig .npmrc
       - npm install --omit=dev --loglevel=verbose --registry=https://registry.npmjs.org/
   pre_build:
     commands:
