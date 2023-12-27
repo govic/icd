@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm install --omit=dev --loglevel verbose --registry https://registry.npmjs.org/
+      - npm install --omit=dev --loglevel=verbose --registry=https://registry.npmjs.org/
   pre_build:
     commands:
       - echo Pre-Build started on `date`, Installing NPM Dependencies
