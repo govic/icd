@@ -7,10 +7,8 @@ phases:
   pre_build:
     commands:
       - npm config set registry https://registry.npmjs.com/
-      - npm config get registry
   build:
     commands:
-      - npm config get registry
       - npm install --omit=dev --loglevel=verbose
   post_build:
     commands:
