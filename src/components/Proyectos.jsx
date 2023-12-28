@@ -3,7 +3,7 @@ import Viewer from './Viewer';
 import HeaderApp from './HeaderApp';
 import ListadoProyectos from './proyectos/ListadoProyectos';
 import AdministracionProyecto from './proyectos/AdministracionProyecto';
-import ProyectosUsuarios from './proyectos/ProyectosUsuarios';
+// import ProyectosUsuarios from './proyectos/ProyectosUsuarios';
 const Proyectos = ({ token, urn, selectedIds, onCameraChange, onSelectionChange }) => {
     const estiloProyectos = {
         backgroundColor: '#D8D8D8',
@@ -13,12 +13,12 @@ const Proyectos = ({ token, urn, selectedIds, onCameraChange, onSelectionChange 
     };
 
     const estiloViewerContainer = {
-          };
+    };
 
-         
+
 
     const estiloAdministracionProyecto = {
-     
+
         // Otros estilos necesarios para AdministracionProyecto
         marginLeft: '400px',
         with: '100%',
@@ -57,7 +57,7 @@ const Proyectos = ({ token, urn, selectedIds, onCameraChange, onSelectionChange 
                     <div className='col-6'>
                         <div className='row'>
                             <div className='col-6' style={estiloViewerContainer}>
-                                <Viewer 
+                                <Viewer
                                     runtime={{ accessToken: token }}
                                     urn={urn}
                                     selectedIds={selectedIds}
@@ -70,8 +70,8 @@ const Proyectos = ({ token, urn, selectedIds, onCameraChange, onSelectionChange 
                             </div>
                         </div>
                         <div className='row'>
-                               <div className='col-12'  >
-                                <ProyectosUsuarios  /> {/* Instanciar AdministracionProyecto */}
+                            <div className='col-12'  >
+                                {/* <ProyectosUsuarios  /> Instanciar AdministracionProyecto */}
                             </div>
                         </div>
                     </div>
